@@ -1,0 +1,30 @@
+<div class="container">
+    {{item.id}}
+    {{item.filmId}}
+    {{item.korisnikId}}
+    {{item.ocena}}
+    {{item.komentar}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+	
+
+    <select formControlName="filmId">
+        <option *ngFor="let item of items" [value]="item.id">{{item.naziv}}</option> 
+    </select>
+    <br>
+    <select formControlName="korisnikId">
+        <option *ngFor="let item of items2" [value]="item.id">{{item.korisnickoIme}}</option> 
+    </select>
+    <br>
+    <input type="number" formControlName="ocena" placeholder="ocena" value="{{item.ocena}}" required>
+    <br>
+    <input type="text" formControlName="komentar" placeholder="komentar" value="{{item.komentar}}" required>
+    <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>

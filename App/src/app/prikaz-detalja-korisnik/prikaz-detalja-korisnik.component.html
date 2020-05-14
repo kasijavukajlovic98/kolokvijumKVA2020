@@ -1,0 +1,23 @@
+<div class="container">
+    {{item.id}}
+    {{item.korisnickoIme}}
+    {{item.email}}
+    {{item.lozinka}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+	
+
+    <input type="text" formControlName="korisnickoIme" placeholder="korisnickoIme" value="{{item.korisnickoIme}}" required>
+    <br>
+    <input type="text" formControlName="email" placeholder="email" value="{{item.email}}" required>
+    <br>
+    <input type="text" formControlName="lozinka" placeholder="lozinka" value="{{item.lozinka}}" required>
+    <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>

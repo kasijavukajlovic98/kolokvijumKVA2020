@@ -1,0 +1,26 @@
+<div class="container">
+    <div *ngFor="let item of items">
+        {{item.id}}
+        {{item.korisnickoIme}}
+        {{item.email}}
+        {{item.lozinka}}
+        <button (click)="obrisi(item.id)">Obrisi</button>
+        <button (click)="detalji(item.id)">Detalji</button>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div>
+    <form [formGroup]="dodajForm" (ngSubmit)="dodaj(dodajForm.value)" ngNativeValidate>
+
+        <input type="text" formControlName="korisnickoIme" placeholder="korisnickoIme" required>
+        <br>
+        <input type="text" formControlName="email" placeholder="email" required>
+        <br>
+        <input type="text" formControlName="lozinka" placeholder="lozinka" required>
+        <br>
+        <input type="submit" value="Dodaj">
+    </form>
+</div>

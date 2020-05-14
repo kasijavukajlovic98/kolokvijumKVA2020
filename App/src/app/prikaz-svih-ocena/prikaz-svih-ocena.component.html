@@ -1,0 +1,33 @@
+<div class="container">
+    <div *ngFor="let item of items">
+        {{item.id}}
+        {{item.filmId}}
+        {{item.korisnikId}}
+        {{item.ocena}}
+        {{item.komentar}}
+        <button (click)="obrisi(item.id)">Obrisi</button>
+        <button (click)="detalji(item.id)">Detalji</button>
+    </div>
+</div>
+
+<br>
+<br>
+
+<div>
+    <form [formGroup]="dodajForm" (ngSubmit)="dodaj(dodajForm.value)" ngNativeValidate>
+
+        <select formControlName="filmId">
+            <option *ngFor="let item of items2" [value]="item.id">{{item.naziv}}</option> 
+        </select>
+        <br>
+        <select formControlName="korisnikId">
+            <option *ngFor="let item of items3" [value]="item.id">{{item.korisnickoIme}}</option> 
+        </select>
+        <br>
+        <input type="number" formControlName="ocena" placeholder="ocena" required>
+        <br>
+        <input type="text" formControlName="komentar" placeholder="komentar" required>
+        <br>
+        <input type="submit" value="Dodaj">
+    </form>
+</div>

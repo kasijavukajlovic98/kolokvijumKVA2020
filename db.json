@@ -1,0 +1,103 @@
+{
+  "film": [
+    {
+      "id": 1,
+      "naziv": "1917",
+      "reziser": "Sam Mendes",
+      "ocena": 7.5
+    },
+    {
+      "id": 2,
+      "naziv": "Blade Runner",
+      "reziser": "Ridley Scott",
+      "ocena": 8
+    },
+    {
+      "id": 3,
+      "naziv": "Aliens",
+      "reziser": "James Cameron",
+      "ocena": 8.3
+    },
+    {
+      "id": 4,
+      "naziv": "Alien",
+      "reziser": "Ridley Scott",
+      "ocena": 8.4
+    },
+    {
+      "id": 5,
+      "naziv": "Titanikkkkk",
+      "reziser": "aaaaa",
+      "ocena": 6
+    }
+  ],
+  "ocena": [
+    {
+      "id": 1,
+      "filmId": 1,
+      "korisnikId": 4,
+      "ocena": 3,
+      "komentar": "Ok."
+    },
+    {
+      "id": 2,
+      "filmId": 1,
+      "korisnikId": 2,
+      "ocena": 5,
+      "komentar": "Odličan film!"
+    },
+    {
+      "id": 3,
+      "filmId": 2,
+      "korisnikId": 1,
+      "ocena": 2,
+      "komentar": "Loše"
+    },
+    {
+      "id": 4,
+      "filmId": 2,
+      "korisnikId": 3,
+      "ocena": 5,
+      "komentar": "Odličan film"
+    },
+    {
+      "id": 5,
+      "filmId": "2",
+      "korisnikId": "3",
+      "ocena": 5,
+      "komentar": "gbhfghbghg"
+    }
+  ],
+  "korisnik": [
+    {
+      "id": 1,
+      "korisnickoIme": "ppetar",
+      "email": "petar@email.com",
+      "lozinka": "123456"
+    },
+    {
+      "id": 2,
+      "korisnickoIme": "marko34",
+      "email": "marko34@snail.com",
+      "lozinka": "lozinka"
+    },
+    {
+      "id": 3,
+      "korisnickoIme": "stefan12",
+      "email": "stefan12@email.com",
+      "lozinka": "654321"
+    },
+    {
+      "id": 4,
+      "korisnickoIme": "nikola",
+      "email": "nikola@nikola.com",
+      "lozinka": "nikola!"
+    },
+    {
+      "id": 5,
+      "korisnickoIme": "kasija123",
+      "email": "kasija@gmail.com",
+      "lozinka": "12345"
+    }
+  ]
+}

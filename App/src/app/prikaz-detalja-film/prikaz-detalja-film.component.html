@@ -1,0 +1,39 @@
+<div class="container">
+    {{item.id}}
+    {{item.naziv}}
+    {{item.reziser}}
+    {{item.ocena}}
+</div>
+
+<br>
+<br>
+
+<div *ngIf="izmeniForm">
+<form [formGroup]="izmeniForm" (ngSubmit)="izmeni(izmeniForm.value)" ngNativeValidate>
+	
+    <input type="text" formControlName="naziv" placeholder="naziv" value="{{item.naziv}}" required>
+    <br>
+    <input type="text" formControlName="reziser" placeholder="reziser" value="{{item.reziser}}" required>
+    <br>
+    <input type="number" formControlName="ocena" placeholder="ocena" value="{{item.ocena}}" required>
+    <br>
+    <input type="submit" value="Izmeni">
+</form>
+</div>
+
+<br>
+<br>
+<br>
+<div *ngIf="nKorisnik && pKorisnik">
+    <p>Najpozitivniji: </p>
+    <p>{{pKorisnik.korisnickoIme}}, {{pKorisnik.email}}</p>
+    <p>{{najpozitivniji.ocena}}, {{najpozitivniji.komentar}}</p>
+    <br>
+    <br>
+    <p>Najnegativniji: </p>
+    <p>{{nKorisnik.korisnickoIme}}, {{nKorisnik.email}}</p>
+    <p>{{najnegativniji.ocena}}, {{najnegativniji.komentar}}</p>
+    <br>
+    <br>
+
+</div>
